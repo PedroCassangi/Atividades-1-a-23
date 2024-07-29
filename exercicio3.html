@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var horasTrabalhadas = parseInt(prompt ("digite suas horas trabalhadas"));
+      var valorDarHora = parseInt(prompt ("digite quanto que ganha por hora"));
+      function calculo(horas , valor ){
+       let salarioBRuto =horas*valor;
+       let salarioLiquido = salarioBRuto -(salarioBRuto * 0.30)
+        return   document.write("quantidade de horas trabalhadas" + horasTrabalhadas +  "<br> valor dar Hora: " + valorDarHora +"<br> salario Liquidor: " + salarioLiquido )
+      }
+      calculo(horasTrabalhadas, valorDarHora);
+  </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercício 07</title>
+  </head>
+  <body>
+    <script>
+      function calcularMedia(numeros) {
+        if (!Array.isArray(numeros) || numeros.length === 0) {
+          return "O parâmetro deve ser um array não vazio de números.";
+        }
+
+        const soma = numeros.reduce((acc, num) => acc + num, 0);
+        const media = soma / numeros.length;
+
+        return media;
+      }
+
+      console.log(calcularMedia([10, 20, 30, 40, 50]));
+      console.log(calcularMedia([1, 2, 3, 4, 5]));
+      console.log(calcularMedia([]));
+    </script>
+  </body>
+</html>

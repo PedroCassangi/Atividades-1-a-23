@@ -1,0 +1,33 @@
+<html>
+  <html lang="pt-br">
+    <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Exercício 23</title>
+    </head>
+    <body>
+      <script>
+        function classificarNota(nota) {
+          if (nota < 38) {
+            return `Reprovado com nota ${nota} <br />`;
+          }
+
+          // Se a diferença entre a nota e o próximo múltiplo de 5 for menor que 3, a nota é arredondada para o próximo múltiplo de 5.
+          // Math.ceil retorna o valor de um número arredondado para cima para o próximo inteiro
+          let proximoMultiploDeCinco = Math.ceil(nota / 5) * 5;
+
+          if (proximoMultiploDeCinco - nota < 3) {
+            nota = proximoMultiploDeCinco;
+          }
+
+          return `Aprovado com nota ${nota} <br />`;
+        }
+
+        document.write(classificarNota(84));
+        document.write(classificarNota(29));
+        document.write(classificarNota(38));
+        document.write(classificarNota(73));
+      </script>
+    </body>
+  </html>
+</html>

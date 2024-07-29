@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercício 04</title>
+  </head>
+  <body>
+    <script>
+      function numeroParaMes(numero) {
+        return Intl.DateTimeFormat("pt-br", { month: "long" }).format(
+          new Date(`${numero}`)
+        );
+      }
+
+      let mes = prompt("digite um número equivalente a um mês:");
+
+      let nomeDoMes = numeroParaMes(mes);
+
+      console.log(`o número ${mes} equivale ao mês ${nomeDoMes}`);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercício 07</title>
+  </head>
+  <body>
+    <script>
+      const limiteImposto = 30000;
+
+      let rendaAn = parseFloat(prompt("Por favor, insira sua renda anual:"));
+
+      function calcImposto(rendaAnual) {
+        if (isNaN(rendaAnual)) {
+          alert("Por favor, insira um valor numérico válido.");
+        } else {
+          if (rendaAnual > limiteImposto) {
+            alert("Você deve pagar impostos.");
+          } else {
+            alert("Você não precisa pagar impostos.");
+          }
+        }
+      }
+
+      calcImposto(rendaAn);
+    </script>
+  </body>
+</html>

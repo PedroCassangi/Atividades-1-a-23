@@ -1,0 +1,36 @@
+<html>
+  <html lang="pt-br">
+    <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Exercício 19</title>
+    </head>
+    <body>
+      <script>
+        function jurosSimples(capitalInicial, taxaJuros, tempo) {
+          let montante = capitalInicial * (1 + (taxaJuros / 100) * tempo);
+          return montante;
+        }
+
+        function jurosCompostos(capitalInicial, taxaJuros, tempo) {
+          let montante = capitalInicial * Math.pow(1 + taxaJuros / 100, tempo);
+          return montante;
+        }
+
+        let capitalInicial = 1000; // R$ 1000
+        let taxaJuros = 5; // 5% ao ano
+        let tempo = 2; // 2 anos
+
+        let montanteSimples = jurosSimples(capitalInicial, taxaJuros, tempo);
+        let montanteComposto = jurosCompostos(capitalInicial, taxaJuros, tempo);
+
+        document.write(
+          `Montante com juros simples: R$ ${montanteSimples.toFixed(2)} <br />`
+        );
+        document.write(
+          `Montante com juros compostos: R$ ${montanteComposto.toFixed(2)}`
+        );
+      </script>
+    </body>
+  </html>
+</html>

@@ -1,0 +1,45 @@
+<html>
+  <html lang="pt-br">
+    <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Exercício 13</title>
+    </head>
+    <body>
+      <script>
+        function fullNumberName(number) {
+          switch (number) {
+            case 0:
+              return "Zero";
+            case 1:
+              return "Um";
+            case 2:
+              return "Dois";
+            case 3:
+              return "Três";
+            case 4:
+              return "Quatro";
+            case 5:
+              return "Cinco";
+            case 6:
+              return "Seis";
+            case 7:
+              return "Sete";
+            case 8:
+              return "Oito";
+            case 9:
+              return "Nove";
+            case 10:
+              return "Dez";
+            default:
+              return "Número fora do intervalo.";
+          }
+        }
+
+        const number = parseInt(prompt("Digite um número entre 0 e 10:"));
+        const result = fullNumberName(number);
+        document.write(result);
+      </script>
+    </body>
+  </html>
+</html>
